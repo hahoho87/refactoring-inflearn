@@ -1,0 +1,1 @@
+package com.hahoho87.refactoring._22_data_class;

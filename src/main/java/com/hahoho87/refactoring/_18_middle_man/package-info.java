@@ -1,0 +1,1 @@
+package com.hahoho87.refactoring._18_middle_man;
