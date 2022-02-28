@@ -4,29 +4,20 @@ import java.util.List;
 
 public class Employee {
 
-    private String type;
+    protected List<String> availableProjects;
 
-    private List<String> availableProjects;
-
-    public Employee(String type, List<String> availableProjects) {
-        this.type = type;
+    public Employee(List<String> availableProjects) {
         this.availableProjects = availableProjects;
     }
 
+    public Employee() {
+    }
+
     public int vacationHours() {
-        return switch (type) {
-            case "full-time" -> 120;
-            case "part-time" -> 80;
-            case "temporal" -> 32;
-            default -> 0;
-        };
+        return 0;
     }
 
     public boolean canAccessTo(String project) {
-        return switch (type) {
-            case "full-time" -> true;
-            case "part-time", "temporal" -> this.availableProjects.contains(project);
-            default -> false;
-        };
+        return false;
     }
 }
